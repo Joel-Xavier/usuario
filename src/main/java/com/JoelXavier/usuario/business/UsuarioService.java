@@ -1,0 +1,23 @@
+package com.JoelXavier.usuario.business;
+
+import com.JoelXavier.usuario.business.converter.UsuarioConverter;
+import com.JoelXavier.usuario.business.dto.UsuarioDTO;
+import com.JoelXavier.usuario.infraestructure.entity.Usuario;
+import com.JoelXavier.usuario.infraestructure.repository.UsuarioRepository;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
+
+@Service
+@RequiredArgsConstructor
+public class UsuarioService {
+    private final UsuarioRepository usuarioRepository;
+    private final UsuarioConverter usuarioConverter;
+
+    public UsuarioDTO salvaUsuario(UsuarioDTO usuarioDTO) {
+        Usuario usuario = usuarioConverter.paraUsuario(usuarioDTO);
+        return usuarioConverter.paraUsuarioDTO(
+                usuarioRepository.save(usuario)
+        );
+    }
+}
+
