@@ -1,4 +1,4 @@
-repositorypackage com.JoelXavier.usuario.infraestructure.security;
+package com.JoelXavier.usuario.infraestructure.security;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
