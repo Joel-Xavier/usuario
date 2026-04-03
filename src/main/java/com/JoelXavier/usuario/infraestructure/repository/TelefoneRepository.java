@@ -1,6 +1,7 @@
 package com.JoelXavier.usuario.infraestructure.repository;
 
-import com.xavier.AprendendoSpring.infraestructure.entity.Telefone;
+
+import com.JoelXavier.usuario.infraestructure.entity.Telefone;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
